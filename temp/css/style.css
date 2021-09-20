@@ -425,7 +425,6 @@ body {
   margin-left: 9.93%;
   width: 43.27%;
   min-height: 313px;
-  width: 475px;
 }
 
 .main .container .right-area .promo__info .promo__title {
@@ -676,6 +675,7 @@ body {
 
 .main .container .right-area .facts__blocks .block .items .item .info .tt {
   min-height: 120px;
+  overflow: hidden;
   width: 83%;
   margin-top: 31px;
   margin-left: 10%;
