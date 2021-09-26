@@ -1,0 +1,51 @@
+.container{
+			margin: 0 auto;
+			margin-top: 100px;
+			width: 500px;
+		}
+
+		.cell{
+		    box-sizing: border-box;
+			background-color: #a8e6cf;
+			border: 1px black solid;
+			width: 100px;
+			height: 100px;
+		}
+
+		.button {
+			display: block;
+			margin: 0 auto;
+			margin-top: 20px;
+			background-color: black;
+			color: #fff;
+		}
+
+		.row{
+			display: flex;
+		}
+
+		.changed{
+			background-color: #feb2a8;
+		}
+
+		@media(min-width:1024px) {
+			.cell:hover {
+				background-color: #F0E68C;
+				transition: 0.5s;
+		    }
+
+		    .button:hover {
+		    	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+		    	transition: 0.5s;
+		    }
+		}
+
+		@media(max-width: 1023px) {
+			.container{
+				width: 250px;
+			}
+			.cell{
+				width: 50px;
+				height: 50px;
+			}
+		}
