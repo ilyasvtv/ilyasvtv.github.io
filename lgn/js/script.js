@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //distance between letters on mobile
     if (innerWidth < 650) {
         offsetValueX = Math.round(window.innerWidth * 0.05);
-        offsetY = Math.round(window.innerHeight * 0.3);
+        offsetY = Math.round(window.innerHeight * 0.45);
     } else {
         offsetValueX = Math.round(window.innerWidth * 0.18);
         offsetY = Math.round(window.innerHeight * 0.3);
