@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
           titleOfLayer = document.querySelector('.static-bg__title');
 
     window.addEventListener('scroll', () => {
-        console.log(scrollY);
         if (scrollY >= 877) {
             layer.classList.add('static-fixed')
         }
