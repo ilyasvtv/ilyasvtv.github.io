@@ -93,16 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (loaded) {
             if (innerWidth / 2 + widthOfCircleArea / 2 < e.clientX) {//right side 
                 circle.style.transform = `translateX(${widthOfCircleArea / 2 - 16}px) scale(0.75)`;
-                logo.style.transform = `translateX(-${((widthOfCircleArea / 2) * 0.04)}%) rotateY(${((widthOfCircleArea / 2) * 0.1533)}deg) translateZ(${((widthOfCircleArea / 2) * 0.014)}px)`
+                logo.style.transform = `translateX(-${((widthOfCircleArea / 2) * 0.04)}%) rotateY(${((widthOfCircleArea / 2) * 0.15)}deg) translateZ(${((widthOfCircleArea / 2) * 0.014)}px)`
             } else if (innerWidth / 2 - widthOfCircleArea / 2 > e.clientX) {//left side
                 circle.style.transform = `translateX(-${widthOfCircleArea / 2 - 16}px) scale(0.75)`;
-                logo.style.transform = `translateX(${((widthOfCircleArea / 2) * 0.04)}%) rotateY(-${((widthOfCircleArea / 2) * 0.1533)}deg) translateZ(${((widthOfCircleArea / 2) * 0.014)}px)`
+                logo.style.transform = `translateX(${((widthOfCircleArea / 2) * 0.04)}%) rotateY(-${((widthOfCircleArea / 2) * 0.15)}deg) translateZ(${((widthOfCircleArea / 2) * 0.014)}px)`
             } else if (e.clientX > innerWidth / 2) { //right side
                 circle.style.transform = `translateX(${e.clientX - innerWidth / 2 - 16}px) scale(1)`;
-                logo.style.transform = `translateX(-${((e.clientX - innerWidth / 2) * 0.04)}%) rotateY(${((e.clientX - innerWidth / 2) * 0.1533)}deg) translateZ(${((e.clientX - innerWidth / 2) * 0.014)}px)`
+                logo.style.transform = `translateX(-${((e.clientX - innerWidth / 2) * 0.04)}%) rotateY(${((e.clientX - innerWidth / 2) * 0.15)}deg) translateZ(${((e.clientX - innerWidth / 2) * 0.014)}px)`
             } else if (e.clientX < innerWidth / 2) { //left side
                 circle.style.transform = `translateX(-${innerWidth / 2 - e.clientX - 16}px) scale(1)`;
-                logo.style.transform = `translateX(${((innerWidth / 2 - e.clientX) * 0.04)}%) rotateY(-${((innerWidth / 2 - e.clientX) * 0.1533)}deg) translateZ(${((innerWidth / 2 - e.clientX) * 0.014)}px)`
+                logo.style.transform = `translateX(${((innerWidth / 2 - e.clientX) * 0.04)}%) rotateY(-${((innerWidth / 2 - e.clientX) * 0.15)}deg) translateZ(${((innerWidth / 2 - e.clientX) * 0.014)}px)`
             }
         }
     })
