@@ -1,0 +1,95 @@
+*
+    box-sizing: border-box;
+
+body
+    padding: 0;
+    margin: 0;
+    background: #000;
+
+.sa
+    padding: 28px 0px;
+    width: 50%; //if contaier max-width: 1200px
+    // width: 600px;
+    height: 314px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 250px;
+    position: relative;
+    overflow: hidden;
+    &__inner
+        position: absolute;
+    &__row
+        width: fit-content;
+        display: flex;
+        margin-bottom: 12px;
+        animation: 28s linear 0s infinite normal none running scrolling;
+        filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);
+        &:nth-child(2n)
+            margin-left: -88px;
+        &:nth-child(2)
+            animation-duration: 34s;
+        &:nth-child(3)
+            animation-duration: 26s;
+        &:nth-child(4)
+            animation-duration: 32s;
+        &:nth-child(5)
+            animation-duration: 36s;
+            
+        a
+            text-decoration: none;
+            outline: none;
+    &__item
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+        border-radius: 44px;
+        background: #fff;
+        padding: 8px 16px;
+        user-select: none;
+        transition: 0.2s ease;
+        color: #000;
+        transform: translate3d(0, 0, 0);
+        overflow: hidden;
+        &:hover
+            transform: scale(1.05);
+            transition: 0.2s ease;
+            color: #004e97;
+    &__logo
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    &__label
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: normal;
+    
+    .left-side
+        &::after
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 24%;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(90deg, white 2.52%, rgba(255, 255, 255, 0) 100%);
+            z-index: 2;
+
+    .right-side
+        &::after
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 24%;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(270deg, white 2.52%, rgba(255, 255, 255, 0) 100%);
+            z-index: 2;
+
+@keyframes scrolling
+    100%
+        transform: translateX(-50%);
+        
