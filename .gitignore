@@ -1,0 +1,10 @@
+*.log
+gulpfile.js
+package.json
+package-lock.json
+webpack.config.js
+node_modules/
+src/js/three/
+src/js/main.js
+
+
