@@ -1,0 +1,32 @@
+// Использование
+//.div {
+//   @include _1170 {
+//       @content;
+//   }
+//}
+
+
+@mixin _1170
+    @media (max-width: 1170px)
+        @content;
+
+@mixin _979
+    @media (min-width: 992px) and (max-width: 1199px) 
+        @content;
+
+@mixin _768
+    @media (min-width: 768px) and (max-width: 991px) 
+        @content;
+
+@mixin _767
+    @media (max-width: 767px)
+        @content;
+
+@mixin _480
+    @media (max-width: 480px)
+        @content;
+    
+@mixin _350
+    @media (max-width: 350px)
+        @content;
+ 
