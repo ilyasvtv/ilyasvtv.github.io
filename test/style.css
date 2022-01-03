@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #F3F7FD;
+}
+
+.container {
+	width: 90vw;
+}
+.card {
+	width: 80%;
+	background: #fff;
+	margin: 20px auto;
+	max-width: 800px;
+}
+
+.card__title {
+	padding: 20px 35px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	line-height: 150%;
+	color: #000005;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table th {
+	text-align: left;
+	border-bottom: 1px solid black;
+	padding: 5px 35px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 150%;
+	color: #6D6D6D;
+}
+table tr td {
+	padding: 20px 35px;
+	width: auto;
+	text-align: left;
+	border-bottom: 1px solid #E0E0E0;
+}
+table tr td:first-child {
+	width: 57%;
+}
+
+table tr td .title a {
+	font-family: Arial;
+	font-size: 15px;
+	line-height: 150%;
+	display: flex;
+	color: #2C63AE;
+	text-decoration: none;
+	width: fit-content;
+}
+
+table tr td .title svg {
+	margin-right: 9px;
+}
+
+table tr td {
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 150%;
+	color: #000005;
+}
+
+table tr td .info a {
+	text-decoration: none;
+}
+
+table tr .membership .buttons {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+table tr .membership .buttons .btn {
+	display: flex;
+	margin-top: 10px;
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 150%;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	color: #6D6D6D;
+}
+
+table tr .membership .buttons svg {
+	margin-right: 5px;
+}
+
+table tr .membership .info {
+	width: 108px;
+	height: 22px;
+	background: #4EAC7F;
+	border-radius: 25px;
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 150%;
+	color: #FFFFFF;
+	border: none;
+}
