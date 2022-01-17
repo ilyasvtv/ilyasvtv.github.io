@@ -1,1 +1,42 @@
-*{box-sizing:border-box}.container{width:720px;min-height:200px;margin:0 auto}.promo{min-height:2000px;background:linear-gradient(180deg,rgba(0,0,0,.8) 0,rgba(255,255,255,0) 100%),url(../img/bg/bg.jpg) center center/cover no-repeat}.promo .works{display:flex;justify-content:space-between;padding-top:75px}.promo .works:first-child{padding-top:200px}.promo .works_item{display:block;text-decoration:none;width:250px;height:300px}.promo .works_item .photo{width:250px;height:300px;transition:.5s}.promo .works_item .photo:hover{transition:.5s;transform:scale(1.2)}.promo .info{text-align:center;color:#fff;text-transform:uppercase;font-size:30px;font-weight:700;margin-top:100px}@media (max-width:767px){.container{width:320px}.promo{min-height:2000px;background:linear-gradient(180deg,rgba(0,0,0,.8) 0,rgba(255,255,255,0) 100%),url(../img/bg/bg.jpg) center center/cover no-repeat}.promo .works{display:block}.promo .works:first-child{padding-top:200px}.promo .works_item{display:block;text-decoration:none;width:300px;height:300px;margin:0 auto;margin-top:75px}.promo .works_item .photo{width:300px;height:300px;border:1px solid #000}.promo .info{text-align:center;color:#fff;text-transform:uppercase;font-size:10px;font-weight:700;margin-top:100px}}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; }
+
+#ca {
+  background: #cea2a2; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden; }
+
+.inputTimer {
+  margin-left: 50px; }
+
+.btnTimer {
+  width: 100px;
+  height: 30px;
+  border-radius: 45px;
+  background: aqua;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 30px;
+  margin-left: 50px; }
+
+.btnTimer:hover {
+  background: #fff;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
