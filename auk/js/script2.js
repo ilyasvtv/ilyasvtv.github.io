@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const helpInfo = document.querySelectorAll('.icon-q');
     const infoSection = document.querySelector('.info-section');
     const checkbox = document.querySelector('.checkbox');
+    const totalBank = document.querySelector('.total-bank');
     let deleteButtons = document.querySelectorAll('.lot__delete');
     let addPriceButtons = document.querySelectorAll('.lot__plus');
     let totalPriceFields = document.querySelectorAll('.lot__total');
@@ -33,8 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
             primaryButton.style = "";
             deleteButtons[el.id].parentNode.remove();
             changeArrays();
-            deleteFromLocalStorage(el)
+            deleteFromLocalStorage(el);
+            countTotalBank();
         }, 300)
+    }
+
+    function countTotalBank() {
+        let sum = 0;
+        totalPriceFields.forEach(el => {
+            sum += +el.value;
+        })
+        totalBank.innerText = `Total bank: ${sum}`;
     }
 
     const addPrice = (e) => {
@@ -52,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         elem.children[1].value = +elem.children[1].value + +elem.children[2].value;
         addToLocalStorage(elem);
         checkLotPlace(elem);
+        countTotalBank();
         elem.children[2].value = "";
     }
 
@@ -63,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         addToLocalStorage(elem);
         checkLotPlace(elem);
+        countTotalBank();
     }
 
     function changeArrays() {
@@ -252,8 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
             totalSeconds = 0
         }
         //i have no idea how i have to get a bug without these strokes of code, but let them be
+        newSeconds = String(totalSeconds % 60);
         newMinutes = String(Math.floor(totalSeconds / 60));
-        newSeconds = String(Math.floor(totalSeconds % 60));
         while (newMinutes.length < 2) {
             newMinutes = [...newMinutes];
             newMinutes.unshift('0');
@@ -284,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 running = false;
                 return;
             }
-            newMilliseconds-=11;
+            newMilliseconds-=17;
             if (newMilliseconds < 0) {
                 newMilliseconds = 0;
             }
@@ -295,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newMilliseconds = newMilliseconds.join('');
             }
             timerMS.innerText = `.${newMilliseconds}`;
-        }, 11)
+        }, 17)
         setTimeout(() => {
             clearInterval(timerMillisecondsStart);
         }, 1000)
@@ -312,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     timerMS.innerText = '.000';
                     return;
                 }
-                newMilliseconds-=11;
+                newMilliseconds-=17;
                 if (newMilliseconds < 0) {
                     newMilliseconds = 0;
                 }
@@ -323,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     newMilliseconds = newMilliseconds.join('');
                 }
                 timerMS.innerText = `.${newMilliseconds}`;
-            }, 11)
+            }, 17)
             setTimeout(() => {
                 clearInterval(timerMillisecondsStart);
             }, 1000)
@@ -389,6 +401,31 @@ document.addEventListener('DOMContentLoaded', () => {
             clicked = false;
         }, 200)
     })
+
+    const globalTimer = document.querySelector('.global-timer');
+    let newGlobalSeconds, newGlobalMinutes, newGlobalHours, totalGlobalSeconds = 0;
+    setInterval(() => {
+        newGlobalSeconds = String(totalGlobalSeconds % 60);
+        newGlobalMinutes = String(Math.floor(totalGlobalSeconds / 60) % 60);
+        newGlobalHours = String(Math.floor(totalGlobalSeconds / 3600) % 60);
+        while (newGlobalHours.length < 2) {
+            newGlobalHours = [...newGlobalHours];
+            newGlobalHours.unshift('0');
+            newGlobalHours = newGlobalHours.join('');
+        }
+        while (newGlobalMinutes.length < 2) {
+            newGlobalMinutes = [...newGlobalMinutes];
+            newGlobalMinutes.unshift('0');
+            newGlobalMinutes = newGlobalMinutes.join('');
+        }
+        while (newGlobalSeconds.length < 2) {
+            newGlobalSeconds = [...newGlobalSeconds];
+            newGlobalSeconds.unshift('0');
+            newGlobalSeconds = newGlobalSeconds.join('');
+        }
+        globalTimer.innerText = `Total time: ${newGlobalHours}:${newGlobalMinutes}:${newGlobalSeconds}`;
+        totalGlobalSeconds++;
+    }, 1000)
 
     clearStorage.addEventListener('click', () => {
         localStorage.clear();
