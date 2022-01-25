@@ -503,6 +503,14 @@ input, button {
   color: #fff;
   font-size: 35px; }
 
+.global-timer, .total-bank {
+  color: #fff;
+  width: 80%;
+  margin: 0 auto; }
+
+.total-bank {
+  margin-top: 10px; }
+
 input::-webkit-outer-spin-button {
   -webkit-appearance: none; }
 
