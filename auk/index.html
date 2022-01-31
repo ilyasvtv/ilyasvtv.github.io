@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Aukcion">
+	<script src="https://use.fontawesome.com/15a30feaff.js"></script>
+	<link rel="stylesheet" href="./css/style2.css">
+	<title>casual</title>
+</head>
+<body>
+	<div class="container">
+		<div class="lot-container">
+			<div class="info-section">
+				<div class="name-info">
+					<div class="icon-q"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+					<div class="information">
+						Here you can write the lot's name
+					</div>
+				</div>
+				<div class="total-info">
+					<div class="icon-q"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+					<div class="information">
+						Here you can see the total bank of each lot
+					</div>
+				</div>
+				<div class="adding-info">
+					<div class="icon-q"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+					<div class="information">
+						Here you can write the number to be added to the lot
+					</div>
+				</div>
+				<div class="plus-info">
+					<div class="icon-q"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+					<div class="information">
+						Click here to add a number from the left cell
+					</div>
+				</div>
+				<div class="delete-info">
+					<div class="icon-q"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+					<div class="information">
+						Click here to delete the lot
+					</div>
+				</div>
+			</div>
+			<div class="lot">
+				<input class="lot__name" type="text">
+				<input class="lot__total" type="number">
+				<input class="lot__addingPrice" type="number">
+				<button class="lot__plus" aria-label="lot plus"></button>
+				<button class="lot__delete" aria-label="lot delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			</div>
+
+			<div class="lot">
+				<input class="lot__name" type="text">
+				<input class="lot__total" type="number">
+				<input class="lot__addingPrice" type="number">
+				<button class="lot__plus" aria-label="lot plus"></button>
+				<button class="lot__delete" aria-label="lot delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			</div>
+
+			<div class="lot">
+				<input class="lot__name" type="text">
+				<input class="lot__total" type="number">
+				<input class="lot__addingPrice" type="number">
+				<button class="lot__plus" aria-label="lot plus"></button>
+				<button class="lot__delete" aria-label="lot delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			</div>
+
+			<button class="add-btn" aria-label="add btn"></button>
+		</div>
+		<div class="info-side">
+			<div class="global-timer">Total time: 00:00:00</div>
+			<div class="total-bank">Total bank: 0</div>
+			<div class="timer-container">
+				<span class="timer">10:00</span>
+				<span class="timerMS">.000</span>
+			</div>
+			<div class="timerControl">
+				<div class="first-row">
+					<button class="run-btn" aria-label="run btn">run timer</button>
+					<button class="clear-btn" aria-label="clear btn">CLEAR</button>
+				</div>
+
+				<div class="second-row">
+					<button class="minus-btn" aria-label="minus btn">-1</button>
+					<button class="plus-btn" aria-label="plus btn">+1</button>
+					<button class="plus-plus-btn" aria-label="plus plus btn">+2</button>
+					<button class="stop-btn" aria-label="stop btn">stop</button>
+				</div>
+
+				<div class="third-row">
+					<button class="clear-storage" aria-label="clear storage">clear storage</button>
+					<div class="information">Click here to clear locatstorage from previous lots</div>
+					<div class="icon-q">
+						<i class="fa fa-question-circle-o" aria-hidden="true"></i>
+					</div>
+				</div>
+
+				<div class="fourth-row">
+					<div class="checkbox-area">
+						<input type="checkbox" class="checkbox">
+						<span>auto add time</span>
+					</div>
+					<div class="information">
+						When this input is chcked, 
+						time will be automatically added when changing positions among lots
+						<br>
+						+2m when new leader
+						<br>
+						+1m when the amount of the lot increases, but the lot does not come out on top
+					</div>
+					<div class="icon-q">
+						<i class="fa fa-question-circle-o" aria-hidden="true"></i>
+					</div>
+				</div>
+
+				<div class="fifth-row">
+					<a href="circle.html" class="to-circle">Go to spin circle</a>
+					<div class="information">
+						When this input is chcked, 
+						time will be automatically added when changing positions among lots
+						<br>
+						+2m when new leader
+						<br>
+						+1m when the amount of the lot increases, but the lot does not come out on top
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/script2.js"></script>
+</body>
+</html>
