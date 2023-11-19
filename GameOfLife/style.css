@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.control {
+    padding: 15px;
+    text-align: center;
+}
+
+.control > * > .wrap {
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.control-size {
+    margin-bottom: 20px;
+}
+
+.size-input {
+    width: 40px;
+    color: #000;
+}
+
+.btn {
+    padding: 3px 20px;
+    border-radius: 25px;
+    background: #527172a3;
+    color: #fff;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    &:hover {
+        transition: box-shadow 0.2s ease;
+        box-shadow: 0px 0px 5px #fff;
+    }
+}
+
+
+

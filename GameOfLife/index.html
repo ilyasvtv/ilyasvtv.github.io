@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GameOfLife</title>
+</head>
+<body>
+    <div class="wrap">
+        <canvas id="area"></canvas>
+        <fieldset class="control">
+            <legend>Control</legend>
+            <div class="control-status">
+                <button class="btn" id="start-btn">Start</button>
+                <button class="btn" id="pause-btn">Pause</button>
+            </div>
+            <div class="control-brush">
+                <div class="wrap">
+                    <input type="radio" name="type" value="0" id="dead">
+                    <label for="dead">Dead</label>
+                </div>
+                <div class="wrap">
+                    <input type="radio" name="type" value="1" id="alive" checked>
+                    <label for="alive">Alive</label>
+                </div>
+                <div class="wrap">
+                    <label for="draw-mode">Constant drawing </label>
+                    <input type="checkbox" name="draw-mode" id="draw-mode">
+                </div>
+            </div>
+            <div class="control-size">
+                <div class="wrap">
+                    <label for="row-cells">Row: </label>
+                    <input type="number" value="30" class="size-input" id="row-cells">
+                    <label for="col-cells">Col: </label>
+                    <input type="number" value="30" class="size-input" id="col-cells">
+                </div>
+                <div class="wrap">
+                    <button class="btn" id="size-btn">Change size</button>
+                </div>
+            </div>
+            <div class="control-population">
+                <button class="btn" id="generation-btn">Generate randomly</button>
+            </div>
+        </fieldset>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
